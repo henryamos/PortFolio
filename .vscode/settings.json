@@ -1,0 +1,5 @@
+{
+    "files.autoSave": "onFocusChange",
+	"editor.insertSpaces": false,
+	"editor.bracketPairColorization.enabled": true
+}
