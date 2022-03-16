@@ -119,6 +119,10 @@ header .user .post {
     color: var(--ligt-white);
 }
 
+header .user .post span {
+    color: #ff7f00;
+}
+
 header .navbar {
     width: 100%;
 }
