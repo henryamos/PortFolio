@@ -24,9 +24,9 @@ const projectData = [
   {
     id: 2,
     type: "web",
-    title: "Techstripped Africa Portal",
+    title: "Perf Website",
     description:
-      "A comprehensive front-end application designed to enhance interaction and engagement among students, alumni, and mentors within a university community.",
+      "This is web app is a wailist application that will be launching the main product for the football fans to join ans share common culture and interest.",
     imgSrc: techstrippedImg,
     stacks: [
       { icon: "FaHtml5", color: "#E34F26" },
@@ -36,16 +36,16 @@ const projectData = [
       { icon: "FaNode", color: "#68A063" },
     ],
     links: {
-      live: "https://members.techstripped.com/#/login",
-      github: "https://github.com/techstrippedafrica/Membership-Portal",
+      github: "https://github.com/henryamos/perfWebsite",
+      live: "https://www.weareperf.com/",
     },
   },
   {
     id: 3,
     type: "web",
-    title: "Techstripped Africa Portal",
+    title: "ireSide App",
     description:
-      "A comprehensive front-end application designed to enhance interaction and engagement among students, alumni, and mentors within a university community.",
+      "FireSide is amobile app for students and children to learn more about Ghanaian tradtion folktales. It has the legendary Kweku Ananse stories.",
     imgSrc: techstrippedImg,
     stacks: [
       { icon: "FaHtml5", color: "#E34F26" },
@@ -59,7 +59,7 @@ const projectData = [
       github: "https://github.com/techstrippedafrica/Membership-Portal",
     },
   },
-  
+
   // Add more projects as needed
 ];
 
