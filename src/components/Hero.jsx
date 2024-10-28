@@ -22,8 +22,8 @@ const Hero = () => (
       <p className="text-lg lg:text-3xl flex items-center">
         <span className="mr-2">I&apos;m a</span>
         <TypingEffect
-          text={["Front-End Developer", "UI/UX Designer", "Freelancer"]}
-          className="font-semibold"
+          text={["Junior Web Developer", "Front-end Developer", "Back-end Developer"]}
+          className="font-semibold text-blue"
         />
       </p>
 

@@ -26,13 +26,16 @@ const About = () => (
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <h2 className="text-4xl font-bold mb-4">
+        <h2 className="text-4xl lg:text-7xl text-blueDark font-bold mb-4">
           About <span className="text-blue">Me</span>
         </h2>
         <p className="text-lg mb-6">
-          I’m a front-end developer passionate about crafting engaging web
-          experiences. With expertise in React and Tailwind CSS, I love building
-          user-centric applications.
+          Dedicated Web developer with 1 year of experience building
+          building web apps with React.js, HTML, CSS. and less than a year working with 
+          Express,Node Js,MonogoDB Passionate about crafting
+          intuitive and visually appealing user interfaces using React anad
+          Tailwind CSS.Proficient in React Js. Seeking opportunities to
+          contribute to innovative projects and collaborate with talented teams.
         </p>
         <div className="tech-stack">
           <h3 className="text-2xl font-semibold mb-4">
