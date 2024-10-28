@@ -1,6 +1,8 @@
 // src/data/projectData.js
-import techstrippedImg  from  '../../assets/images/techstripped-Macbook.png'
-
+import techstrippedImg from "../../assets/images/techstripped-Macbook.png";
+import PerfImg from "../../assets/images/playahead-Macbook.png";
+import fireSideImg from "../../assets/images/mobileapp-Macbook.png";
+import EatUI from '../../assets/images/eat.png'
 const projectData = [
   {
     id: 1,
@@ -27,7 +29,7 @@ const projectData = [
     title: "Perf Website",
     description:
       "This is web app is a wailist application that will be launching the main product for the football fans to join ans share common culture and interest.",
-    imgSrc: techstrippedImg,
+    imgSrc: PerfImg,
     stacks: [
       { icon: "FaHtml5", color: "#E34F26" },
       { icon: "FaCss3Alt", color: "#2965F1" },
@@ -40,13 +42,32 @@ const projectData = [
       live: "https://www.weareperf.com/",
     },
   },
+
   {
     id: 3,
     type: "web",
-    title: "ireSide App",
+    title: "Best Eats",
+    description:
+      "Best Eats is app where u can get food price and filter between the food you want and the prices.",
+    imgSrc: EatUI,
+    stacks: [
+      { icon: "FaHtml5", color: "#E34F26" },
+      { icon: "FaCss3Alt", color: "#2965F1" },
+      { icon: "FaJs", color: "#F0DB4F" },
+      { icon: "FaReact", color: "#61DAFB" },
+    ],
+    links: {
+      github: "https://github.com/henryamos/EatUI",
+      live: "https://www.weareperf.com/",
+    },
+  },
+  {
+    id: 4,
+    type: "mobile",
+    title: "FireSide App",
     description:
       "FireSide is amobile app for students and children to learn more about Ghanaian tradtion folktales. It has the legendary Kweku Ananse stories.",
-    imgSrc: techstrippedImg,
+    imgSrc: fireSideImg,
     stacks: [
       { icon: "FaHtml5", color: "#E34F26" },
       { icon: "FaCss3Alt", color: "#2965F1" },
@@ -55,11 +76,9 @@ const projectData = [
       { icon: "FaNode", color: "#68A063" },
     ],
     links: {
-      live: "https://members.techstripped.com/#/login",
-      github: "https://github.com/techstrippedafrica/Membership-Portal",
+      github: "https://github.com/henryamos/FireSide",
     },
   },
-
   // Add more projects as needed
 ];
 

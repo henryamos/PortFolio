@@ -18,7 +18,7 @@ const Hero = () => (
     }}
   >
     <div className="flex flex-col items-center mt-8 lg:items-center text-center lg:text-left space-y-5 lg:space-y-9">
-      <h1 className="text-4xl lg:text-[5rem]  mb-2 lg:mb-4 font-bold ">
+      <h1 className="text-5xl lg:text-[5rem]  mb-2 lg:mb-4 font-bold ">
         Henry Amos
       </h1>
       <p className="text-xl lg:text-3xl flex items-center">
@@ -38,7 +38,7 @@ const Hero = () => (
         <a
           href="/assets/files/Benjamin_Henry_Amos_Cv.pdf"
           download
-          className="bg-primary px-6 py-2 rounded lg:px-8 lg:py-4 lg:text-xl text-white text-center lg:text-left"
+          className="bg-primary px-12 py-2 rounded  lg:py-4 lg:text-xl text-white text-center lg:text-left"
         >
           Download CV
         </a>
