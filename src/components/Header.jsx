@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full top-0 z-10 p-4 ${
-        scrolled ? "bg-opacity-80 bg-blue-600" : "bg-transparent"
+        scrolled ? "bg-opacity-80 bg-blue" : "bg-transparent"
       }`}
     >
       <nav className="flex justify-between items-center">

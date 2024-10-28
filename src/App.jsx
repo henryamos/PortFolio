@@ -5,6 +5,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import EducationExperience from "./components/EducationExperience";
 
 const App = () => (
   <div>
@@ -12,6 +13,7 @@ const App = () => (
     <main>
       <Hero />
       <About />
+      <EducationExperience/>
       <Services />
       <Projects />
       <Contact />
