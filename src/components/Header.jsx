@@ -63,7 +63,7 @@ const Header = () => {
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed inset-0 flex flex-col items-center justify-center z-20 bg-blue-800"
+            className="fixed inset-0 flex flex-col items-center justify-center z-20 bg-blue"
             initial={{ opacity: 0, x: "-100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "-100%" }}

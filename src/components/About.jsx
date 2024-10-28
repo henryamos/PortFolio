@@ -1,35 +1,51 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
-import AboutImg from '../assets/images/myPic.JPG'
+import AboutImg from "../assets/images/myPic.JPG";
+import { motion } from "framer-motion";
 
 const About = () => (
-  <section
-    id="about"
-    className="about-me p-8  mt-12 flex flex-col lg:flex-row items-center space-y-8 lg:space-x-8"
-  >
-    <div
-      className="img-container w-1/2 lg:w-1/3 bg-cover bg-center "
-      style={{ backgroundImage: `url(${AboutImg})` }}
-    ></div>
-    <div className="about-text w-1/2 lg:w-2/3">
-      <h2 className="text-4xl font-bold">
-        About <span className="text-blue-600">Me</span>
-      </h2>
-      <p className="text-lg my-4">
-        I’m a front-end developer passionate about crafting engaging web
-        experiences. With expertise in React and Tailwind CSS, I love building
-        user-centric applications.
-      </p>
-      <div className="tech-stack mt-6">
-        <h3 className="text-2xl font-semibold">
-          Tech <span className="text-primary">Stack</span>
-        </h3>
-        <div className="icons flex space-x-4 mt-4">
-          <FaHtml5 className="text-red-600 text-5xl" />
-          <FaCss3Alt className="text-blue text-5xl" />
-          <FaJs className="text-yellow-500 text-5xl" />
-          <FaReact className="text-blue text-5xl" />
+  <section id="about" className="p-8 mt-12 flex justify-center">
+    <div className="flex flex-col lg:flex-row items-center space-y-8 lg:space-y-0 lg:gap-12 max-w-screen-lg">
+      {/* Image Section with Motion Animation */}
+      <motion.div
+        className="flex justify-center w-full lg:w-1/3"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <img
+          src={AboutImg}
+          alt="About Me"
+          className="rounded-full w-2/3 lg:w-full shadow-lg"
+        />
+      </motion.div>
+
+      {/* Text Section with Motion Animation */}
+      <motion.div
+        className="text-center lg:text-left w-full lg:w-2/3"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <h2 className="text-4xl font-bold mb-4">
+          About <span className="text-blue">Me</span>
+        </h2>
+        <p className="text-lg mb-6">
+          I’m a front-end developer passionate about crafting engaging web
+          experiences. With expertise in React and Tailwind CSS, I love building
+          user-centric applications.
+        </p>
+        <div className="tech-stack">
+          <h3 className="text-2xl font-semibold mb-4">
+            Tech <span className="text-blue">Stack</span>
+          </h3>
+          <div className="flex justify-center lg:justify-start space-x-4">
+            <FaHtml5 className="text-red-600 text-5xl" />
+            <FaCss3Alt className="text-blue text-5xl" />
+            <FaJs className="text-yellow-500 text-5xl" />
+            <FaReact className="text-blue text-5xl" />
+          </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   </section>
 );
