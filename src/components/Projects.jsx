@@ -11,7 +11,6 @@ import {
   FaGithub,
   FaLink,
 } from "react-icons/fa";
-
 const iconMap = {
   FaHtml5: FaHtml5,
   FaCss3Alt: FaCss3Alt,
