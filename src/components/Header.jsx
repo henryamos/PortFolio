@@ -22,7 +22,7 @@ const Header = () => {
       <nav className="flex justify-between items-center">
         <h2
           id="logo"
-          className={`text-2xl p-2 font-bold transition-all duration-300 ${
+          className={`text-2xl p-2 bg-blue text-lightPrimary rounded-md font-bold transition-all duration-300 ${
             scrolled ? "bg-black text-white" : "bg-blue-600 text-lightPrimary"
           }`}
         >
