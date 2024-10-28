@@ -37,7 +37,7 @@ const Projects = () => {
             key={tab}
             onClick={() => setActiveTab(tab)}
             className={`tab ${
-              activeTab === tab ? "bg-blue-600 text-white" : "bg-gray-300"
+              activeTab === tab ? "bg-blue text-white" : "bg-gray-200 text-black"
             } p-3 rounded`}
           >
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
