@@ -4,7 +4,7 @@ import AboutImg from '../assets/images/myPic.JPG'
 const About = () => (
   <section
     id="about"
-    className="about-me p-8 mt-12 flex flex-col lg:flex-row items-center space-y-8 lg:space-x-8"
+    className="about-me p-8  mt-12 flex flex-col lg:flex-row items-center space-y-8 lg:space-x-8"
   >
     <div
       className="img-container w-1/2 lg:w-1/3 bg-cover bg-center "

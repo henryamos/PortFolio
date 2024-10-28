@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const EducationExperience = () => (
   <section className="education py-20 bg-gray-100">
@@ -16,7 +16,7 @@ const EducationExperience = () => (
               July 2024
             </span>
             <h4 className="text-primary font-semibold">
-              Bachelor's in Information Technology
+              Bachelor&apos;s in Information Technology
             </h4>
             <p className="text-gray-700">
               Even the all-powerful Pointing has no control about the blind
