@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-4">
-          {["Home", "About Me", "Services", "Projects", "Contact"].map(
+          {["Home", "About", "Services", "Projects", "Contact"].map(
             (item, index) => (
               <li key={index}>
                 <a
