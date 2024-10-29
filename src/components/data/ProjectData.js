@@ -58,7 +58,7 @@ const projectData = [
     ],
     links: {
       github: "https://github.com/henryamos/EatUI",
-      live: "https://www.weareperf.com/",
+      live: "https://foodsite-rho.vercel.app/",
     },
   },
   {
