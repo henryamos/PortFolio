@@ -1,4 +1,4 @@
-import { FaHtml5, FaCss3Alt, FaJs, FaReact } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import AboutImg from "../assets/images/myPic.JPG";
 import { motion } from "framer-motion";
 
@@ -30,12 +30,11 @@ const About = () => (
           About <span className="text-blue">Me</span>
         </h2>
         <p className="text-lg mb-6">
-          Dedicated Web developer with 1 year of experience building
-          building web apps with React.js, HTML, CSS. and less than a year working with 
-          Express,Node Js,MonogoDB Passionate about crafting
-          intuitive and visually appealing user interfaces using React anad
-          Tailwind CSS.Proficient in React Js. Seeking opportunities to
-          contribute to innovative projects and collaborate with talented teams.
+          Dedicated Web Developer skilled in creating modern, intuitive, and
+          responsive web applications using React.js, Tailwind CSS, and Node.js.
+          Proficient in crafting scalable solutions and delivering user-friendly
+          interfaces. Successfully built and deployed wailist application,charity foundation website and many more.
+          Excited to collaborate with innovative teams and contribute to impactful projects.
         </p>
         <div className="tech-stack">
           <h3 className="text-2xl font-semibold mb-4">
@@ -46,6 +45,9 @@ const About = () => (
             <FaCss3Alt className="text-blue text-5xl" />
             <FaJs className="text-yellow-500 text-5xl" />
             <FaReact className="text-blue text-5xl" />
+            <FaNodeJs className="text-green-500 text-5xl" />
+            
+            
           </div>
         </div>
       </motion.div>

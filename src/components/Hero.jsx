@@ -25,7 +25,7 @@ const Hero = () => (
         <span className="mr-2">I&apos;m a</span>
         <TypingEffect
           text={[
-            "Junior Web Developer",
+            "Web Developer",
             "Front-end Developer",
             "Back-end Developer",
           ]}

@@ -44,12 +44,12 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-4">
-          {["Home", "About", "Services", "Projects", "Contact"].map(
+          {["Home", "About","Education" ,"Services", "Projects", "Contact"].map(
             (item, index) => (
               <li key={index}>
                 <a
                   href={`#${item.toLowerCase()}`}
-                  className="text-lightPrimary hover:text-primary transition-colors"
+                  className="text-lightPrimary hover:text-black transition-colors"
                 >
                   {item}
                 </a>
