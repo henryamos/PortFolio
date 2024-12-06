@@ -1,7 +1,7 @@
 // src/components/Projects.js
 
 import { useState } from "react";
-import projectData from "./data/ProjectData";
+import { projectData } from "./data/ProjectData";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -22,9 +22,12 @@ const iconMap = {
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("all");
 
-  const filteredProjects = projectData.filter(
-    (project) => activeTab === "all" || project.type === activeTab
-  );
+  const filteredProjects = projectData.filter((project) => {
+    if (activeTab === "all") return true; // Show all projects
+    return Array.isArray(project.type) 
+      ? project.type.includes(activeTab) // Check if activeTab is in the type array
+      : project.type === activeTab; // For single type projects
+  });
 
   return (
     <section id="projects" className="p-20 bg-white">
@@ -32,7 +35,7 @@ const Projects = () => {
         My <span className="text-blue">Projects</span>
       </h2>
       <div className="tab-container flex justify-center space-x-4 mb-8">
-        {["all", "uiux", "web", "mobile"].map((tab) => (
+        {["all", "web", "mobile","uiux",].map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
@@ -56,16 +59,18 @@ const Projects = () => {
               className="w-full h-48 object-cover rounded-t"
             />
             <h3 className="text-lg font-semibold text-center text-blueDark mt-4">{project.title}</h3>
-            <p className="text-sm text-gray-700 mt-2">{project.description}</p>
+            <p className="text-md lg:text-lg text-gray-700 mt-2">{project.description}</p>
             <div className="flex justify-center space-x-2 mt-4">
               {project.stacks.map((stack, index) => {
                 const IconComponent = iconMap[stack.icon];
                 return (
-                  <IconComponent
-                    key={index}
-                    className="text-xl"
-                    color={stack.color}
-                  />
+                  IconComponent ? (
+                    <IconComponent
+                      key={index}
+                      className="text-xl"
+                      color={stack.color}
+                    />
+                  ) : null
                 );
               })}
             </div>

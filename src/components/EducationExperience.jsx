@@ -112,7 +112,7 @@ const EducationExperience = () => {
               >
                 <span className="date block text-blue-900 font-semibold">
                   <FaCalendarAlt className="inline mr-2" />
-                  September 2024 - Present
+                  September 2024 - November 2024
                 </span>
                 <h4 className="text-primary font-semibold">
                   Back-End Engineer
