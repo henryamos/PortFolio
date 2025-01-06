@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="mb-4 md:mb-0">
           <h2 className="text-2xl text-center font-bold">Henry Amos</h2>
           <p className="text-gray-300 mt-4 text-center">
-            © 2024 Portfolio. All rights reserved.
+            &copy; {new Date().getFullYear()} Portfolio. All rights reserved.
           </p>
         </div>
         <div className="flex space-x-4 mb-4 md:mb-0">

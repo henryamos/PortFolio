@@ -5,6 +5,7 @@ import fireSideImg from "../../assets/images/mobileapp-Macbook.png";
 import delkomImg from "../../assets/images/delkom.jpg";
 import africanShopImg from "../../assets/images/africanShop.png";
 import eventlyImg from "../../assets/images/Evently.png";
+import lawFirmImg from "../../assets/images/lawFirm.png"; 
 
 export const projectData = [
   {
@@ -120,6 +121,22 @@ export const projectData = [
       live: "eventlyevents.netlify.app",
     },
   },
+  {
+    id: 8,
+    type: "web",
+    title: "PRO-ATTORNEY Website",
+    description:
+      "A modern front-end website developed for a lawyer, focusing on professional presentation and user experience.",
+    imgSrc: lawFirmImg,
+    stacks: [
+      { icon: "FaHtml5", color: "#E34F26" },
+      { icon: "FaCss3Alt", color: "#2965F1" },
+      { icon: "FaJs", color: "#F0DB4F" },
+      { icon: "FaReact", color: "#61DAFB" },
+    ],
+    links: {
+      github: "https://github.com/henryamos/lawyer-website", 
+      live: "https://standerferfamilylawgroup.net/", 
+    },
+  },
 ];
-
-
