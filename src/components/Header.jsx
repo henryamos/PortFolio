@@ -76,7 +76,7 @@ const Header = () => {
               &times;
             </button>
             <ul className="flex flex-col space-y-6 text-center text-2xl">
-              {["Home", "About Me", "Services", "Projects", "Contact"].map(
+              {["Home", "About", "Services", "Projects", "Contact"].map(
                 (item, index) => (
                   <li key={index}>
                     <a
