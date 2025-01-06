@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { HiLightBulb, HiUsers, HiCode, HiStar } from 'react-icons/hi';
 import { FaCheckCircle } from 'react-icons/fa';
