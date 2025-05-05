@@ -1,33 +1,39 @@
 import { motion } from 'framer-motion';
 import { HiLightBulb, HiUsers, HiCode, HiStar } from 'react-icons/hi';
-import { FaCheckCircle } from 'react-icons/fa';
+import { FaCheckCircle, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { projectData } from './data/ProjectData';
 import lawFirmImg from "../assets/images/lawFirm.png";
-import techstrippedImg from "../assets/images/techstripped-Macbook.png";
 import delkomImg from "../assets/images/delkom.jpg";
+import bricksAndWoodImg from "../assets/images/bricks.jpg";
+import technologiesImg from "../assets/images/1294technologies.jpg";
 
 const ClientWork = () => {
   const stats = [
     {
       id: 1,
-      number: "3+",
+      number: "4+",
       label: "Client Projects",
-      icon: <HiUsers className="text-3xl text-blue-500" />,
+      icon: <HiUsers className="text-4xl text-white" />,
+      color: "from-[#00a5e4] to-[#12556d]"
     },
     {
       id: 2,
-      number: "10+",
+      number: "15+",
       label: "Contributions",
-      icon: <HiCode className="text-3xl text-purple-500" />,
+      icon: <HiCode className="text-4xl text-white" />,
+      color: "from-purple-500 to-purple-600"
     },
     {
       id: 3,
       number: "100%",
       label: "Client Satisfaction",
-      icon: <HiStar className="text-3xl text-yellow-500" />,
+      icon: <HiStar className="text-4xl text-white" />,
+      color: "from-yellow-500 to-yellow-600"
     },
   ];
 
-  const clientProjects = [
+  // Existing client projects
+  const existingProjects = [
     {
       id: 1,
       clientName: "PRO-ATTORNEY",
@@ -46,22 +52,6 @@ const ClientWork = () => {
     },
     {
       id: 2,
-      clientName: "TechStripped Africa",
-      role: "Frontend Developer",
-      image: techstrippedImg,
-      description: "Contributed to building a comprehensive portal for university community engagement.",
-      contributions: [
-        "Built interactive user interfaces using React",
-        "Implemented user authentication and dashboard features",
-        "Collaborated with team members to enhance platform functionality"
-      ],
-      links: {
-        github: "https://github.com/techstrippedafrica/Membership-Portal",
-        live: "https://members.techstripped.com/#/login"
-      }
-    },
-    {
-      id: 3,
       clientName: "Delkom Charity Foundation",
       role: "Full Stack Developer",
       image: delkomImg,
@@ -80,114 +70,159 @@ const ClientWork = () => {
     }
   ];
 
+  // New client projects
+  const newProjects = [
+    {
+      id: 3,
+      clientName: "Bricks and Wood Ghana",
+      role: "Full Stack Developer",
+      image: bricksAndWoodImg,
+      description: "Developed a luxury real estate platform showcasing premium properties in Ghana, built with Next.js, React, TypeScript, and Tailwind CSS.",
+      contributions: [
+        "Implemented advanced SEO optimization for better visibility",
+        "Created responsive property listings with virtual tours",
+        "Developed contact forms and blog section",
+        "Integrated modern UI/UX practices with Tailwind CSS",
+        "Built with Next.js 14 for optimal performance"
+      ],
+      links: {
+        github: "https://github.com/henryamos/brickswood",
+        live: "https://www.brickandwoodghana.com/"
+      }
+    },
+    {
+      id: 4,
+      clientName: "1294 Technologies",
+      role: "Frontend Developer",
+      image: technologiesImg,
+      description: "Created a modern tech company website showcasing web solutions and digital branding services.",
+      contributions: [
+        "Built responsive and interactive UI with React",
+        "Implemented smooth animations and transitions",
+        "Designed clean and professional layout with Tailwind CSS",
+        "Optimized for performance and user experience",
+        "Integrated modern design principles"
+      ],
+      links: {
+        github: "https://github.com/henryamos/1294Technologies",
+        live: "https://1294technologies.com/"
+      }
+    }
+  ];
+
+  // Combine existing and new projects
+  const clientProjects = [...existingProjects, ...newProjects];
+
   return (
-    <section className="py-20 bg-gray-50" id="client-work">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-gradient-to-br from-gray-50 via-white to-gray-50" id="client-work">
+      <div className="container mx-auto px-4 max-w-7xl">
+        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl font-bold mb-4">Client Work & Contributions</h2>
-          <div className="flex items-center justify-center gap-2">
-            <HiLightBulb className="text-yellow-500 text-2xl" />
-            <p className="text-gray-600">Showcasing successful collaborations and impactful contributions</p>
+          <div className="inline-block mb-4">
+            <span className="px-6 py-2 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 rounded-full text-sm font-medium shadow-sm">
+              Professional Experience
+            </span>
           </div>
+          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            Client Work & Contributions
+          </h2>
+          <p className="text-gray-600 text-xl max-w-2xl mx-auto">
+            Showcasing successful collaborations and impactful contributions that drive business growth
+          </p>
         </motion.div>
 
-        {/* Stats Banner */}
+        {/* Stats Section */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 bg-white rounded-2xl shadow-lg p-8"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20"
         >
           {stats.map((stat) => (
-            <div key={stat.id} className="flex items-center gap-4 justify-center">
-              <div className="p-3 bg-gray-50 rounded-lg">{stat.icon}</div>
-              <div className="text-left">
-                <h3 className="text-3xl font-bold text-gray-800">{stat.number}</h3>
-                <p className="text-gray-600">{stat.label}</p>
+            <div key={stat.id} className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-white to-gray-50 rounded-2xl transform group-hover:scale-105 transition-transform duration-300 shadow-lg"></div>
+              <div className="relative p-8 rounded-2xl border border-gray-100 bg-white">
+                <div className={`p-4 rounded-xl bg-gradient-to-r ${stat.color} text-white mb-6 inline-block shadow-lg`}>
+                  {stat.icon}
+                </div>
+                <h3 className="text-4xl font-bold text-gray-900 mb-2">{stat.number}</h3>
+                <p className="text-gray-600 text-lg">{stat.label}</p>
               </div>
             </div>
           ))}
         </motion.div>
 
-        {/* Project Cards */}
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {clientProjects.map((project) => (
+          {clientProjects.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5 }}
-              className="relative group rounded-xl overflow-hidden shadow-lg bg-white"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group min-h-[600px]"
             >
-              {/* Project Image */}
-              <div className="aspect-video w-full">
-                <img 
-                  src={project.image} 
-                  alt={project.clientName}
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="relative rounded-2xl overflow-hidden bg-white shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col">
+                {/* Project Image */}
+                <div className="h-[300px] relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.clientName}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
 
-              {/* Overlay Content */}
-              <motion.div 
-                className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/95 p-6 opacity-0 group-hover:opacity-100 transition-all duration-300 overflow-y-auto"
-                initial={false}
-                whileHover={{ opacity: 1 }}
-              >
-                <div className="flex flex-col h-full">
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{project.clientName}</h3>
-                    <p className="text-blue-400 font-medium mb-3">{project.role}</p>
-                    <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+                {/* Project Content */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex flex-col gap-3 mb-4">
+                    <h3 className="text-xl font-bold text-gray-900 line-clamp-1">{project.clientName}</h3>
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 rounded-full text-sm font-medium shadow-sm w-fit">
+                      {project.role}
+                    </span>
                   </div>
                   
-                  <div className="flex-1">
-                    <h4 className="text-white font-semibold flex items-center gap-2 mb-2">
-                      <FaCheckCircle className="text-green-500" />
-                      Key Contributions
-                    </h4>
-                    <ul className="space-y-2 mb-4">
-                      {project.contributions.map((contribution, index) => (
-                        <motion.li
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="flex items-start gap-2 text-gray-300 text-sm"
-                        >
-                          <span className="text-green-500 mt-1">•</span>
-                          {contribution}
-                        </motion.li>
-                      ))}
-                    </ul>
+                  <p className="text-gray-600 mb-6 line-clamp-3 text-sm leading-relaxed">{project.description}</p>
+
+                  {/* Contributions */}
+                  <div className="space-y-2 mb-6 flex-1">
+                    {project.contributions.slice(0, 3).map((contribution, idx) => (
+                      <div key={idx} className="flex items-start gap-2">
+                        <FaCheckCircle className="text-green-500 mt-1 flex-shrink-0" />
+                        <p className="text-gray-600 text-sm leading-relaxed">{contribution}</p>
+                      </div>
+                    ))}
                   </div>
 
-                  {/* Project Links */}
-                  <div className="flex gap-4 mt-auto pt-4">
+                  {/* Links */}
+                  <div className="flex gap-4 mt-auto pt-6">
                     <a 
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-gradient-to-r from-gray-800 to-gray-700 text-white rounded hover:from-gray-700 hover:to-gray-600 transition-all duration-300 text-sm flex-1 text-center"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-lg hover:from-gray-800 hover:to-gray-700 transition-all duration-300 shadow-md hover:shadow-lg"
                     >
-                      View Code
+                      <FaGithub className="text-lg" />
+                      <span>Code</span>
                     </a>
                     <a 
                       href={project.links.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded hover:from-blue-500 hover:to-indigo-500 transition-all duration-300 text-sm flex-1 text-center"
+                      className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-[#00a5e4] to-[#12556d] text-white rounded-lg hover:from-[#02b9e3] hover:to-[#2d84b4] transition-all duration-300 shadow-md hover:shadow-lg"
                     >
-                      Live Demo
+                      <FaExternalLinkAlt className="text-lg" />
+                      <span>Live</span>
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
           ))}
         </div>

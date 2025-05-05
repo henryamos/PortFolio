@@ -31,7 +31,7 @@ export const projectData = [
   },
   {
     id: 9,
-    type: ["web", "uiux"],
+    type: ["web"],
     title: "Bricks and Wood Ghana",
     description:
       "A luxury real estate platform showcasing premium properties and services in Ghana. The platform includes property listings, virtual tours, contact forms, and a blog section. Implemented with best practices for performance, accessibility, and search engine optimization.",
@@ -142,10 +142,10 @@ export const projectData = [
   },
   {
     id: 10,
-    type: ["web", "uiux"],
+    type: ["web"],
     title: "1294 Technologies",
     description:
-      "A modern tech company website showcasing web solutions, custom software development, and digital branding services. Built with React and Tailwind CSS, featuring a clean, professional design with smooth animations and responsive layouts. The site effectively communicates the company's expertise in delivering cutting-edge digital solutions for global businesses.",
+      "A modern tech company website showcasing web solutions, custom software development, and digital branding services.The site effectively communicates the company's expertise in delivering cutting-edge digital solutions for global businesses.",
     imgSrc: technologiesImg,
     stacks: [
       { icon: "FaReact", color: "#61DAFB" },
