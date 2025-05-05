@@ -11,12 +11,17 @@ import {
   FaGithub,
   FaLink,
 } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
+
 const iconMap = {
   FaHtml5: FaHtml5,
   FaCss3Alt: FaCss3Alt,
   FaJs: FaJs,
   FaReact: FaReact,
   FaNode: FaNode,
+  SiNextdotjs: SiNextdotjs,
+  SiTailwindcss: SiTailwindcss,
+  SiTypescript: SiTypescript,
 };
 
 const Projects = () => {

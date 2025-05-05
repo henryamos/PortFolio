@@ -1,11 +1,13 @@
 // src/data/projectData.js
 import techstrippedImg from "../../assets/images/techstripped-Macbook.png";
-import PerfImg from "../../assets/images/playahead-Macbook.png";
 import fireSideImg from "../../assets/images/mobileapp-Macbook.png";
 import delkomImg from "../../assets/images/delkom.jpg";
 import africanShopImg from "../../assets/images/africanShop.png";
 import eventlyImg from "../../assets/images/Evently.png";
-import lawFirmImg from "../../assets/images/lawFirm.png"; 
+import lawFirmImg from "../../assets/images/lawFirm.png";
+import bricksAndWoodImg from "../../assets/images/bricks.jpg";
+import technologiesImg from "../../assets/images/1294technologies.jpg";
+import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 export const projectData = [
   {
@@ -28,22 +30,21 @@ export const projectData = [
     },
   },
   {
-    id: 2,
-    type: "web",
-    title: "Perf Website",
+    id: 9,
+    type: ["web", "uiux"],
+    title: "Bricks and Wood Ghana",
     description:
-      "This is a web app and waitlist application for football fans to join and share common culture and interest.",
-    imgSrc: PerfImg,
+      "A luxury real estate platform showcasing premium properties and services in Ghana. The platform includes property listings, virtual tours, contact forms, and a blog section. Implemented with best practices for performance, accessibility, and search engine optimization.",
+    imgSrc: bricksAndWoodImg,
     stacks: [
-      { icon: "FaHtml5", color: "#E34F26" },
-      { icon: "FaCss3Alt", color: "#2965F1" },
-      { icon: "FaJs", color: "#F0DB4F" },
+      { icon: "SiNextdotjs", color: "#000000" },
       { icon: "FaReact", color: "#61DAFB" },
-      { icon: "FaNode", color: "#68A063" },
+      { icon: "SiTypescript", color: "#3178C6" },
+      { icon: "SiTailwindcss", color: "#06B6D4" },
     ],
     links: {
-      github: "https://github.com/henryamos/perfWebsite",
-      live: "https://www.weareperf.com/",
+      live: "https://www.brickandwoodghana.com/",
+      github: "https://github.com/henryamos/brickswood",
     },
   },
   {
@@ -137,6 +138,22 @@ export const projectData = [
     links: {
       github: "https://github.com/henryamos/lawyer-website", 
       live: "https://standerferfamilylawgroup.net/", 
+    },
+  },
+  {
+    id: 10,
+    type: ["web", "uiux"],
+    title: "1294 Technologies",
+    description:
+      "A modern tech company website showcasing web solutions, custom software development, and digital branding services. Built with React and Tailwind CSS, featuring a clean, professional design with smooth animations and responsive layouts. The site effectively communicates the company's expertise in delivering cutting-edge digital solutions for global businesses.",
+    imgSrc: technologiesImg,
+    stacks: [
+      { icon: "FaReact", color: "#61DAFB" },
+      { icon: "SiTailwindcss", color: "#06B6D4" },
+    ],
+    links: {
+      live: "https://1294technologies.com/",
+      github: "https://github.com/henryamos/1294Technologies",
     },
   },
 ];
